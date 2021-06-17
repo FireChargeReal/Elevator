@@ -29,12 +29,12 @@ export default class HelloWorld {
 		if (this.params['height'] !== null) {
 			this.height = Number(this.params['height']);
 		}
-		else{
+		else {
 			this.height = 4.8;
 		}
 		if (this.params['speed'] !== null) {
 			this.speed = Number(this.params['speed']);
-		}else{
+		} else {
 			this.speed = 2.5;
 		}
 		// Load a glTF model before we use it
@@ -73,9 +73,10 @@ export default class HelloWorld {
 					}
 				},
 				collider: {
-					geometry: { shape: MRE.ColliderType.Box,
-					size: {x:0.5 ,y:0.5 ,z:0.5}
-				 },
+					geometry: {
+						shape: MRE.ColliderType.Box,
+						size: { x: 0.5, y: 0.5, z: 0.5 }
+					},
 					layer: MRE.CollisionLayer.Navigation
 				}
 			}
@@ -93,7 +94,7 @@ export default class HelloWorld {
 			destination: { transform: { local: { position: { x: 0, y: this.height, z: 0 } } } },
 			duration: this.speed
 		});
-		await this.sleep((this.speed+4)*1000);
+		await this.sleep((this.speed + 4) * 1000);
 		await MRE.Animation.AnimateTo(this.context, this.elevator, {
 			destination: { transform: { local: { position: { x: 0, y: 0, z: 0 } } } },
 			duration: 1
