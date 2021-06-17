@@ -89,7 +89,7 @@ export default class HelloWorld {
 		this.sleep((this.speed+4)*1000);
 		MRE.Animation.AnimateTo(this.context, this.elevator, {
 			destination: { transform: { local: { position: { x: 0, y: 0, z: 0 } } } },
-			duration: this.speed
+			duration: 0
 		});
 
 
