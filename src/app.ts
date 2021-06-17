@@ -27,15 +27,15 @@ export default class HelloWorld {
 		this.assets = new MRE.AssetContainer(this.context);
 
 		if (this.params['height'] !== null) {
-			this.height = 4.8;
+			this.height = Number(this.params['height']);
 		}
 		else{
-			this.height = Number(this.params['height'])
+			this.height = 4.8;
 		}
 		if (this.params['speed'] !== null) {
-			this.speed = 2.5;
+			this.speed = Number(this.params['speed']);
 		}else{
-			this.speed = Number(this.params['speed'])
+			this.speed = 2.5;;
 		}
 		// Load a glTF model before we use it
 		const buttonMesh = await this.assets.loadGltf('button.glb', "mesh");
@@ -73,7 +73,7 @@ export default class HelloWorld {
 					}
 				},
 				collider: {
-					geometry: { shape: MRE.ColliderType.Box },
+					geometry: { shape: MRE.ColliderType.Auto },
 					layer: MRE.CollisionLayer.Navigation
 				}
 			}
