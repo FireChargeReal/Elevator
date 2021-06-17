@@ -29,8 +29,13 @@ export default class HelloWorld {
 		if (this.params['height'] !== null) {
 			this.height = 4.8;
 		}
+		else{
+			this.height = Number(this.params['height'])
+		}
 		if (this.params['speed'] !== null) {
 			this.speed = 2.5;
+		}else{
+			this.speed = Number(this.params['speed'])
 		}
 		// Load a glTF model before we use it
 		const buttonMesh = await this.assets.loadGltf('button.glb', "mesh");
