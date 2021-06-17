@@ -12,12 +12,12 @@ export default class HelloWorld {
 	private assets: MRE.AssetContainer;
 	private button: MRE.Actor = null;
 	private elevator: MRE.Actor = null;
-
 	private height: number;
 	private speed: number;
 	constructor(private context: MRE.Context, private params: MRE.ParameterSet) {
 		this.context.onStarted(() => this.started());
 	}
+	
 	private user: MRE.User;
 	/**
 	 * Once the context is "started", initialize the app.
@@ -25,18 +25,19 @@ export default class HelloWorld {
 	private async started() {
 		// set up somewhere to store loaded assets (meshes, textures, animations, gltfs, etc.)
 		this.assets = new MRE.AssetContainer(this.context);
-
-		if (this.params['height'] !== null) {
+		
+		if (this.params['height'] !== undefined) {
 			this.height = Number(this.params['height']);
 		}
 		else {
 			this.height = 4.8;
 		}
-		if (this.params['speed'] !== null) {
+		if (this.params['speed'] !== undefined) {
 			this.speed = Number(this.params['speed']);
 		} else {
 			this.speed = 2.5;
 		}
+		
 		// Load a glTF model before we use it
 		const buttonMesh = await this.assets.loadGltf('button.glb', "mesh");
 
@@ -75,7 +76,7 @@ export default class HelloWorld {
 				collider: {
 					geometry: {
 						shape: MRE.ColliderType.Box,
-						size: { x: 2.5, y: 0.5, z: 1.5 }
+						size: { x: 0.5, y: 0.5, z: 0.5 }
 					},
 					layer: MRE.CollisionLayer.Navigation
 				}
