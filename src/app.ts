@@ -76,7 +76,7 @@ export default class HelloWorld {
 				collider: {
 					geometry: {
 						shape: MRE.ColliderType.Box,
-						size: { x: 2, y: 0.5, z: 2 }
+						size: { x: 2.5, y: 0.5, z: 2 }
 					},
 					layer: MRE.CollisionLayer.Navigation
 				}
