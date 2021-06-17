@@ -1,6 +1,6 @@
 {
-  "name": "buzzer",
-  "version": "0.0.1",
+  "name": "DynamicElevator",
+  "version": "1.2.1",
   "private": true,
   "description": "",
   "main": "built/server.js",
