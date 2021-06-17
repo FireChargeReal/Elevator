@@ -35,7 +35,7 @@ export default class HelloWorld {
 		if (this.params['speed'] !== null) {
 			this.speed = Number(this.params['speed']);
 		}else{
-			this.speed = 2.5;;
+			this.speed = 2.5;
 		}
 		// Load a glTF model before we use it
 		const buttonMesh = await this.assets.loadGltf('button.glb', "mesh");
