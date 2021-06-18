@@ -81,7 +81,7 @@ export default class Elevator {
 				},
 				collider: {
 					geometry: {
-						shape: MRE.ColliderType.Box,
+						shape: elevatorMesh,
 						size: { x: 1.6 + this.config["width"], y: 0.5, z: 1.6 + this.config["length"] }
 					},
 					layer: MRE.CollisionLayer.Navigation
