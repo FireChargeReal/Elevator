@@ -59,16 +59,22 @@ export default class Elevator {
 			}
 		});
 
-		let elevatorMesh: any;
+		let resourceID: string;
 		if (this.config["shape"] === 0) {
-			elevatorMesh = await this.assets.loadGltf("elevator.glb", "mesh");
+			resourceID = "1765571507825672216";
 		}
-		else {
-			elevatorMesh = await this.assets.loadGltf("elevator2.glb", "mesh");
+		else if(this.config["shape"] === 1) {
+			resourceID = "1765571516868591649";
 		}
-		this.elevator = MRE.Actor.CreateFromPrefab(this.context, {
+		else if(this.config["shape"] === 2) {
+			resourceID = "1765571499302846486";
+		}
+		else{
+			resourceID = "1765571490788409362";
+		}
+		this.elevator = MRE.Actor.CreateFromLibrary(this.context, {
 			// using the data we loaded earlier
-			firstPrefabFrom: elevatorMesh,
+			resourceId: resourceID,
 			// Also apply the following generic actor properties.
 			actor: {
 				name: "Altspace Cube",
