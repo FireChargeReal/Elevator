@@ -40,12 +40,12 @@ export default class Elevator {
 		// console.log(this.config);
 
 		// Load a glTF model before we use it
-		const buttonMesh = await this.assets.loadGltf("button.glb", "mesh");
+		const buttonID = "1765608764049719385";
 
 		// spawn a copy of the glTF model
-		this.button = MRE.Actor.CreateFromPrefab(this.context, {
+		this.button = MRE.Actor.CreateFromLibrary(this.context, {
 			// using the data we loaded earlier
-			firstPrefabFrom: buttonMesh,
+			resourceId: buttonID,
 			// Also apply the following generic actor properties.
 			actor: {
 				name: "Altspace Cube",
