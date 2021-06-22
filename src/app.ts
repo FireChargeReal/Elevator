@@ -24,7 +24,7 @@ export default class Elevator {
 	/**
 	 * Once the context is "started", initialize the app.
 	 */
-	private async started() {
+	private started() {
 		// set up somewhere to store loaded assets (meshes, textures, animations, gltfs, etc.)
 		this.assets = new MRE.AssetContainer(this.context);
 		let allowed = ["height", "speed", "shape", "width", "length", "x", "y", "z"]
