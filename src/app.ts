@@ -40,7 +40,7 @@ export default class Elevator {
 		// console.log(this.config);
 
 		// Load a glTF model before we use it
-		const buttonID = "1765608764049719385";
+		const buttonID = "artifact:1765608764049719385";
 
 		// spawn a copy of the glTF model
 		this.button = MRE.Actor.CreateFromLibrary(this.context, {
