@@ -61,16 +61,16 @@ export default class Elevator {
 
 		let resourceID: string;
 		if (this.config["shape"] === 0) {
-			resourceID = "1765571507825672216";
+			resourceID = "artifact:1765571507825672216";
 		}
 		else if(this.config["shape"] === 1) {
-			resourceID = "1765571516868591649";
+			resourceID = "artifact:1765571516868591649";
 		}
 		else if(this.config["shape"] === 2) {
-			resourceID = "1765571499302846486";
+			resourceID = "artifact:1765571499302846486";
 		}
 		else{
-			resourceID = "1765571490788409362";
+			resourceID = "artifact:1765571490788409362";
 		}
 		this.elevator = MRE.Actor.CreateFromLibrary(this.context, {
 			// using the data we loaded earlier
