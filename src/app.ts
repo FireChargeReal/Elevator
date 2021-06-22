@@ -53,8 +53,7 @@ export default class Elevator {
 				transform: {
 					local: {
 						position: { x: -3 + this.config["x"], y: 0 + this.config["y"], z: 0.35 + this.config["z"] },
-						scale: { x: 0.4, y: 0.4, z: 0.4 },
-						rotation: { x: 0, y: 0, z: 0 }
+						scale: { x: 0.4, y: 0.4, z: 0.4 }
 					}
 				}
 			}
