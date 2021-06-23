@@ -52,7 +52,7 @@ export default class Elevator {
 				// Parent the glTF model to the text actor, so the transform is relative to the text
 				transform: {
 					local: {
-						position: { x: -2.5 + this.config["x"], y: 0 + this.config["y"], z: 0.35 + this.config["z"] },
+						position: { x: -2.5 + this.config["x"], y: 0 + this.config["y"], z: 0.50 + this.config["z"] },
 						scale: { x: 0.4, y: 0.4, z: 0.4 }
 					}
 				}
