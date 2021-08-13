@@ -69,12 +69,8 @@ export default class Elevator {
 		else if(this.config["shape"] === 2) {
 			resourceID = "artifact:1765571499302846486";
 		}
-		else if(this.config["shape"] === 3){
+		else if(this.config["shape"] === 3) {
 			resourceID = "artifact:1765571490788409362";
-		}
-		else 
-		{
-			resourceID = "artifact:0";
 		}
 		this.elevator = MRE.Actor.CreateFromLibrary(this.context, {
 			// using the data we loaded earlier
@@ -98,6 +94,9 @@ export default class Elevator {
 				}
 			}
 		});
+		if (this.config["shape"] >= 4) {
+			this.elevator.appearance.enabled=false;
+		}
 
 		const buttonB = this.button.setBehavior(MRE.ButtonBehavior);
 
